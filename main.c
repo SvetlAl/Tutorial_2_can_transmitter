@@ -86,15 +86,17 @@ GPIOB->BSRR |= GPIO_BSRR_BR4;						//
 // ***************************************** STB PIN CONTROL **********************************
 
 
+
+// 
 	static Std_Can_Message_Type _1DC_Message;
 	
 
 	_1DC_Message.id_highbyte=0x1;
 	_1DC_Message.id_lowbyte=0xDC;
 	_1DC_Message.dlc=4;
-	_1DC_Message.data[3]=0x33;
-	_1DC_Message.data[2]=0xA8;
-	_1DC_Message.data[1]=0x04;
+	_1DC_Message.data[3]=0x1B;
+	_1DC_Message.data[2]=0x17;
+	_1DC_Message.data[1]=0xF9;
 	_1DC_Message.data[0]=0x02;
 	_1DC_Message.data[4]=0x0;
 	_1DC_Message.data[5]=0x0;
@@ -103,7 +105,7 @@ GPIOB->BSRR |= GPIO_BSRR_BR4;						//
 	
 	
 			
-	uint32_t injection_delay = 12; //injection delay - 12ms
+	uint32_t injection_delay = 15; //injection delay - 
 
 	while(1){
 		IWDG_reset();	
