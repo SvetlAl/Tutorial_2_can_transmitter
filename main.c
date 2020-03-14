@@ -88,6 +88,7 @@ GPIOB->BSRR |= GPIO_BSRR_BR4;						//
 
 	static Std_Can_Message_Type _1DC_Message;
 	
+
 	_1DC_Message.id_highbyte=0x1;
 	_1DC_Message.id_lowbyte=0xDC;
 	_1DC_Message.dlc=4;
@@ -99,6 +100,8 @@ GPIOB->BSRR |= GPIO_BSRR_BR4;						//
 	_1DC_Message.data[5]=0x0;
 	_1DC_Message.data[6]=0x0;
 	_1DC_Message.data[7]=0x0;
+	
+	
 			
 	uint32_t injection_delay = 12; //injection delay - 12ms
 
